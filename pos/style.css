@@ -1,0 +1,394 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#eef2f7;
+    padding:30px;
+}
+
+#mainheading{
+    text-align:center;
+    color:#2c3e50;
+    margin-bottom:25px;
+    font-size:36px;
+}
+
+.container{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+}
+
+
+.invoice-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+
+    background:white;
+    padding:20px;
+    border-radius:10px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    margin-bottom:25px;
+}
+
+.invoice-info h3{
+
+    margin:8px 0;
+    color:#2c3e50;
+}
+
+.invoice-info span{
+
+    color:#27ae60;
+    font-weight:bold;
+}
+
+.search-invoice{
+
+    display:flex;
+    align-items:flex-end;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.search-invoice label{
+
+    display:block;
+    width:100%;
+    font-weight:bold;
+}
+
+.search-invoice input{
+
+    width:220px;
+    padding:10px;
+
+    border:1px solid #bbb;
+
+    border-radius:6px;
+
+    outline:none;
+
+    font-size:15px;
+}
+
+.search-invoice input:focus{
+
+    border-color:#3498db;
+}
+
+
+.card{
+
+    background:white;
+
+    margin-bottom:25px;
+
+    border-radius:10px;
+
+    padding:25px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.card h2{
+
+    color:#2c3e50;
+
+    margin-bottom:20px;
+}
+
+
+.product-group{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    margin-bottom:30px;
+}
+
+.product-group div{
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.product-group label{
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+    color:#555;
+}
+
+.product-group input{
+
+    padding:11px;
+
+    border-radius:6px;
+
+    border:1px solid #bbb;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+.product-group input:focus{
+
+    border-color:#3498db;
+
+    box-shadow:0 0 8px rgba(52,152,219,.3);
+}
+
+.btn-div{
+
+    justify-content:flex-end;
+}
+
+
+button{
+
+    padding:11px 20px;
+
+    border:none;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+#addtocart{
+
+    background:#27ae60;
+}
+
+#addtocart:hover{
+
+    background:#1f8b4d;
+}
+
+#searchBtn{
+
+    background:#3498db;
+}
+
+#searchBtn:hover{
+
+    background:#2b7abd;
+}
+
+#printBill{
+
+    background:#9b59b6;
+}
+
+#printBill:hover{
+
+    background:#8243a0;
+}
+
+#newBill{
+
+    background:#e67e22;
+}
+
+#newBill:hover{
+
+    background:#ca6b17;
+}
+
+.db{
+
+    background:#e74c3c;
+
+    padding:8px 12px;
+}
+
+.db:hover{
+
+    background:#c0392b;
+}
+
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:15px;
+}
+
+table th{
+
+    background:#34495e;
+
+    color:white;
+
+    padding:14px;
+}
+
+table td{
+
+    text-align:center;
+
+    padding:12px;
+
+    border-bottom:1px solid #ddd;
+}
+
+table tr:nth-child(even){
+
+    background:#f8f9fa;
+}
+
+table tr:hover{
+
+    background:#ecf5ff;
+}
+
+
+.bill-summary{
+
+    width:350px;
+
+    margin-left:auto;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    background:#fafafa;
+}
+
+.bill-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin:15px 0;
+
+    font-size:17px;
+}
+
+.bill-row.grand{
+
+    border-top:2px solid #ccc;
+
+    padding-top:15px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    color:#27ae60;
+}
+
+
+.button-group{
+
+    margin-top:25px;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:15px;
+}
+
+
+@media(max-width:1000px){
+
+.product-group{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.bill-summary{
+
+width:100%;
+
+margin-top:20px;
+}
+
+}
+
+@media(max-width:700px){
+
+.invoice-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:20px;
+}
+
+.product-group{
+
+grid-template-columns:1fr;
+}
+
+.search-invoice{
+
+width:100%;
+}
+
+.search-invoice input{
+
+width:100%;
+}
+
+.button-group{
+
+flex-direction:column;
+}
+
+button{
+
+width:100%;
+}
+
+table{
+
+font-size:14px;
+}
+
+}
+
+#saveBill{
+
+    background:#2980b9;
+}
+
+#saveBill:hover{
+
+    background:#1f6391;
+}

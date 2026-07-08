@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Billing System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 id="mainheading">Retail Billing System</h1>
+
+    <div class="container">
+
+
+        <div class="invoice-header">
+
+            <div class="invoice-info">
+                <h3>Invoice No :
+                    <span id="invoiceNo">INV1001</span>
+                </h3>
+
+                <h3>Date :
+                    <span id="currentDate"></span>
+                </h3>
+
+                <h3>Time :
+                    <span id="currentTime"></span>
+                </h3>
+            </div>
+
+            <div class="search-invoice">
+
+                <label>Search Invoice</label>
+
+                <input
+                    type="text"
+                    id="searchInvoice"
+                    placeholder="Enter Invoice Number">
+
+                <button id="searchBtn">
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Add Product</h2>
+
+            <div class="product-group">
+
+                <div>
+
+                    <label>Product ID</label>
+
+                    <input
+                        type="text"
+                        id="product-filter"
+                        placeholder="Enter Product ID">
+
+                </div>
+
+                <div>
+
+                    <label>Price</label>
+
+                    <input
+                        type="number"
+                        id="product-price"
+                        readonly>
+
+                </div>
+
+                <div>
+
+                    <label>Quantity</label>
+
+                    <input
+                        type="number"
+                        id="product-qty">
+
+                </div>
+
+                <div class="btn-div">
+
+                    <button id="addtocart">
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <h2>Cart Items</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Product</th>
+
+                        <th>Price</th>
+
+                        <th>Quantity</th>
+
+                        <th>Total</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="cart-items-body">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Bill Summary</h2>
+
+            <div class="bill-summary">
+
+                <div class="bill-row">
+                    <span>Total Items</span>
+                    <span id="totalitems">0</span>
+                </div>
+
+                <div class="bill-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">0.00</span>
+                </div>
+
+                <div class="bill-row">
+                    <span>GST (18%)</span>
+                    <span id="gst">0.00</span>
+                </div>
+
+                <div class="bill-row grand">
+                    <span>Grand Total</span>
+                    <span id="grandtotal">0.00</span>
+                </div>
+
+            </div>
+
+
+<div class="button-group">
+
+    <button id="saveBill">💾 Save Bill</button>
+
+    <button id="printBill">🖨 Print Bill</button>
+
+    <button id="newBill">➕ New Bill</button>
+
+</div>
+              
+
+                
+
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
